@@ -1,10 +1,18 @@
 from groq import Groq
-import streamlit as st 
+import streamlit as st
+from dotenv import load_dotenv
+import os
 
-st.title('O Produtor Musical do Python 🎙️🎛️🖥️ ')
 
-client = Groq(api_key = '')
 
+load_dotenv()
+
+
+st.title("O Produtor Musical do Python 🎙️🎛️🖥️")
+
+
+
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 print('--------------------')
 print()
@@ -32,4 +40,4 @@ resposta = client.chat.completions.create(
         
 )
 
-st.write(resposta.choices[0].message.content)
+st.write(resposta.choices[0].message.content) 
