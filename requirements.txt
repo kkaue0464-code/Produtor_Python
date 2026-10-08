@@ -1,3 +1,9 @@
-groq
 streamlit
-python-dotenv
+librosa
+numpy
+subprocess
+os
+sys
+plotly
+github
+render
